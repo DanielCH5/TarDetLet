@@ -1,0 +1,678 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+$primary: #154932; //Ændrer primary farven i bootstrap til en grøn i stedet for den normale blå
+$modal-header-border-color: $primary;
+$modal-footer-border-color: $primary;
+$secondary: #FF66C4;
+$light: #FAFAF8;
+$turkis: #008071;
+$lysgrøn: #ABD43E;
+$lysblå :#B9E4EB;
+$highlight: #acd43e70;
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"lysblå": $lysblå,
+	"turkis": $turkis,
+	"lysgrøn":$lysgrøn,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+
+
+*{
+	font-family: Roboto;
+}
+body {
+	background-color: $light;
+}
+
+h1 {
+	font-size: 46px;
+}
+
+h2 {
+	font-size: 35px;
+}
+
+h3 {
+	font-size: 29px;
+}
+
+h4 {
+	font-size: 23px;
+}
+
+h6 {
+	font-size: 15px;
+}
+
+small {
+	font-size: 10px;
+}
+
+p {
+	font-size: 12px;
+}
+.highlight{
+	background-color: $highlight;
+}
+.navigation {
+	background-color: $light;
+	display: grid;
+	height: 66px;
+	filter: drop-shadow(0 0 0.75rem #00000050);
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.navi-logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.udvid {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+	padding: 0 30px;
+
+
+}
+
+.menuknap {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.cirkel {
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+	background-color: $primary;
+	margin-bottom: 2px;
+}
+.cirkel2 {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: $lysblå;
+	
+}
+.linje{
+	background-color: $light;
+	width:1px;
+	height: 100%;
+}
+
+.herobillede {
+	display: flex;
+	justify-content: center;
+	margin: 0px 30px 0px 30px
+}
+
+.cta {
+	background-color: $secondary;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	border-radius: 8px;
+	padding: 18px;
+}
+
+.spise {
+	background-color: #008071;
+	padding: 12px 0px 48px 0px;
+}
+
+.korts {
+	margin: 24px 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+}
+.korts2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.kort {
+	background-color: #ABD43E;
+	color: $primary;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	padding-top: 12px;
+}
+
+.korttitel {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.kortbillede {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.minpenge {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.overskrifter {
+	margin: 48px 30px 48px 30px;
+	color: $primary;
+
+}
+
+.overskrifterhvid {
+	margin: 48px 30px 48px 30px;
+	color: #FAFAF8;
+
+}
+
+.overskrifter1 {
+	margin: 16px 30px 16px 30px;
+	color: $primary;
+
+}
+
+.overskrifter1hvid {
+	margin: 16px 30px 16px 30px;
+	color: #FAFAF8;
+
+}
+
+.overskrifter2 {
+	color: $primary;
+}
+
+
+.travlhverdag {
+	margin: 48px 30px 48px 30px;
+	padding: 32px 24px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	background-color: #ABD43E;
+	border-radius: 12px;
+}
+
+.eventsektion {
+	margin: 48px 30px 48px 30px;
+	padding: 32px 24px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	background-color: #B9E4EB;
+	border-radius: 12px;
+}
+.eventsektion2 {
+	margin: 48px 0px;
+	padding: 10px 24px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	background-color: #B9E4EB;
+
+}
+
+
+.travltekst {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.travlimg img {
+	width: 100%;
+	padding-top: 58px;
+}
+
+.videre {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 24px;
+}
+
+.videre1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 24px 16px 24px 16px;
+}
+
+.play {
+	background-color: #ABD43E;
+	border-radius: 8px;
+	padding: 4px 6px 7px 10px;
+	margin-right: 10px;
+}
+
+.play1 {
+	background-color: #FF66C4;
+	border-radius: 8px;
+	padding: 4px 6px 7px 10px;
+	margin-right: 10px;
+}
+
+
+.budget {
+	display: flex;
+	flex-direction: column;
+}
+
+.bokse {
+	margin: 0px 30px 64px 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+
+
+}
+
+.boks1,
+.boks2 {
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	margin-top: 50px;
+	padding-top: 24px;
+}
+
+.boks1 {
+	padding-bottom: 24px;
+	background-color: #FF66C4;
+}
+
+.boks2 {
+	background-color: #B9E4EB;
+}
+
+.bokstekst1 {
+	margin: 0px 16px 0px 16px;
+	color: #FAFAF8;
+}
+
+.bokstekst2 {
+	margin: 48px 16px 0px 16px;
+}
+
+.boksbillede {
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	padding-top: 330px;
+	flex-direction: row;
+	padding-left: 30px;
+}
+
+.boksbillede1 {
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	flex-direction: row;
+	padding: 72px 0px 0px 240px;
+}
+
+.opacity {
+	opacity: 0.5;
+}
+
+.takemethere {
+	margin: 24px 30px 24px 30px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: #FAFAF8;
+}
+
+.cta1 {
+	background-color: #FF66C4;
+	padding: 10px 25px 10px 25px;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+
+
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 20px solid #FAFAF8;
+}
+
+.nyttigapp {
+	display: flex;
+	flex-direction: row;
+	margin: 48px 30px 48px 30px;
+
+}
+
+.nyttigapp img {
+	align-self: center;
+}
+
+.events {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 16px;
+}
+
+.event {
+	display: flex;
+	background-color: #FF66C4;
+	color: #FAFAF8;
+	border-radius: 8px;
+	padding: 18px;
+}
+
+.eventbilled {
+	display: flex;
+	flex-direction: row;
+	margin-left: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.eventbilled img {
+	width: 100%;
+}
+
+.eventoverskrift {
+	margin-bottom: 32px;
+}
+
+.tipstricks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 48px 30px;
+	gap: 20px;
+}
+
+.tipstricksbillede {
+	display: flex;
+	align-items: center;
+}
+
+.blåsektion {
+	background-color: #b9e4eb;
+}
+
+.opbevaringoverskrifter {
+	padding: 36px 30px;
+}
+
+.opbevaringslideshow {
+	display: flex;
+	justify-content: center;
+
+}
+
+.køleskab {
+	background-color: #abd43e;
+	width: 200px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin-bottom: 36px;
+}
+
+.appslinks {
+	margin: 48px 30px;
+}
+
+.appgruppe {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.apps {
+	background-color: #154932;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #FAFAF8;
+	padding: 20px;
+	cursor: pointer;
+
+}
+
+.nyttigoverskrift {
+	margin-bottom: 20px;
+}
+
+#målsætninger {
+	background-color: #ABD43E;
+	padding: 36px 30px;
+}
+
+#målsætningslideshow {
+	margin-top: 26px;
+}
+
+.målsætningslide {
+	background-color: #FAFAF8;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.målsætningbillede {
+	display: flex;
+	justify-content: center;
+}
+
+.socials {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.socialsfooter {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.instagrid {
+	padding: 0px 30px 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+
+
+}
+
+.gridboks img {
+	width: 100%;
+}
+
+.månedevents {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.månedunder {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	margin-bottom: 10px;
+}
+
+.månedbillede img {
+	width: 100%;
+}
+
+.månedoverskrift {
+	display: flex;
+	align-items: center;
+}
+
+.eventgrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.enkeltevent {
+	background-color: $turkis;
+	border-radius: 8px;
+	padding: 10px 10px 0;
+	color: #FAFAF8;
+}
+
+.eventdato {
+	display: flex;
+	flex-direction: row;
+}
+
+.eventdato img {
+	width: 100%;
+	padding-right: 5px;
+}
+
+.eventdato h6 {
+	padding-top: 5px;
+}
+
+.footer {
+	background-color: #008071;
+	padding: 30px;
+	color: #FFFFFF;
+	padding-bottom: 50px;
+}
+
+.footergrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+
+}
+
+.footerflex {
+	display: flex;
+	flex-direction: column;
+	padding-top: 10px;
+	width: 100%;
+}
+
+.footerlink {
+	font-size: 10px;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 128, 113, 0.94);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 18px;
+	color: #FAFAF8;
+}
+
+.topmenu {
+	display: flex;
+	align-items: center;
+}
+
+.topmenu a {
+	padding: 0px 30px;
+	margin-left: 30px;
+	color: #FAFAF8;
+}
+
+.menulinks a {
+	padding: 20px 30px;
+	text-decoration: none;
+	color: #FAFAF8;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: $primary;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	font-size: 40px;
+}
+
+.menupunkt {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menupunkt p {
+	padding-top: 20px;
+}
+
+.kampagne {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tarteletbillede {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.menusocials {
+	padding: 30px;
+}
+
+.modal-content {
+	background-color: #ABD43E;
+	color: $primary;
+
+}
